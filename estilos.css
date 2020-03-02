@@ -1,0 +1,468 @@
+/* ------root Parte más global incluso que el *-------  */
+:root{
+  --color1:rgb(219,144,0.5);
+  --color2:rgba(23,180,83,0.78);
+  --color3:rgba(11,194,211,0.63);
+  --fondo:#f2f2f2;
+  /* --fondo: rgba(255,255,255,1); */
+  --titulos:33px;
+  --margenes:60px;
+  --espacios:10px;
+  --espacios-contenido:45px;
+  --subtitulos:18px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'open-sans';
+    background: var(--fondo);
+}
+img{
+  vertical-align: top;
+}
+/*----------------Preloader-----------Preloader----------Preloader----------Preloader-------------------------*/
+.hidden{                                                                                                      
+  /* overflow: hidden; */
+}
+.centrado{
+  position: fixed;
+   width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;/*Para que solo aparezca el preloader y no se vea de resto negro*/
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #cef;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+  /* -------------Fin Preloader-------------Fin Preloader-------------Fin Preloader */
+
+  header{
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(to bottom,
+      rgba(211,135,20,.6),
+      rgba(29,241,171,.6),
+      rgba(7,109,150,.45)
+    ),url(imagenes/fondo2.jpeg);
+    background-attachment: fixed;/*Cuando se mueve muestra el mismo color*/
+    /* background-position: center; */
+    background-size: cover;/* se adapta la pantalla*/
+    font-size: 10px;
+  }
+  #nav{
+    width: 100%;
+    position: fixed;
+    /* height: 80px; */
+    /* color: white; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);/*Cuadrito sombreado*/
+    font-weight: bold;
+    max-height: 130px;
+    /* border: solid 3px; */
+  }
+  .nav1{
+    background: transparent;
+    height: 75px;
+    /* color:rgba(99, 96, 91, 0.171); */
+    color: #fff;
+    /* border: solid 3px red ; */
+    
+  }
+  
+   .nav2{
+    background: var(--fondo);
+    height: 95px;
+    /* color: rgb(36, 35, 35); */
+    color: var(--color1);
+    /* border: solid 3px blue ; */
+  }
+
+
+  .contenedor-nav{
+    display: flex;
+    margin: auto;
+    /* width: 100%; */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    height: inherit;
+    width: inherit;
+    /* height: 90%; */
+    overflow: hidden;
+    /* margin-left: 280px; */
+    /* border: solid 1px; */
+
+  }
+
+ .textos{
+
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   color: white;
+   overflow: hidden;
+   text-align: center;
+border: solid 1px;
+
+ }
+  nav .enlaces a{
+    display: inline-block;
+    padding: 5px;
+    margin-right: 17px;
+    font-size: 17px;
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;/*linea al seleccionar boton*/
+    color: inherit;/*hereda el color del padre nav*/
+  }
+  nav .enlaces a:hover{
+    border-bottom: 3px solid #1498a4;
+    transition: 0.6s;
+  }
+
+  .logo, .logo img
+  {
+    height: 80px;
+    opacity:3;
+  }
+  .icono{
+    display: none;
+    font-size: 24px;
+    padding: 23.5px 20px;
+    background-color:transparent;
+    opacity:3;
+  }
+  
+  .textos h1{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .textos h2{
+    font-size: 30px;
+  }
+  /* ---------------------Main------------------------------------Main------------------Main------------------------------------------ */
+  .contenedor {
+    margin: auto;
+    padding: var(--margenes);
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    overflow: hidden;
+    /* border: solid 1px; */
+  }
+  .contenedor h3{
+    font-size: var(--titulos);
+    color: var(--color1);
+    margin-bottom: var(--margenes);
+  }
+  
+  .contenedor p{
+    font-size: var(--subtitulos);
+    color: black;
+    font-weight: 300;
+  }
+.after::after{ /*-Agrega La linea naranaja debajo de los parrafos*/
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: var(--espacios);
+  width: 100px;
+  height: 2px;
+  background: var(--color1);
+  margin-bottom: var(--espacios-contenido);
+}
+.card{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /*---Por si non caben las imagenes se juenten*/
+  /* border:solid 1px; */
+}
+.card .content-card{
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.5); /*Crea la sombra de las cards*/
+  overflow: hidden;
+  height: 400px; 
+}
+.people{
+  height: 86%;
+}
+.content-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;/*para que se adapte a la people*/
+}
+.texto-team{
+  height: 14%;
+  width: 100%;
+  padding: var(--espacios);
+  /* border: solid 1px; */
+}
+.about{
+  background:rgb(35, 39, 49); 
+  background: rgb(102, 122, 151);
+  margin-top: 1%;
+  width: 100%;
+  height:auto;
+  font-weight: 500;
+  text-align: center; 
+  /* border: solid 1px; */
+
+
+}
+
+#text2{
+  color: black;
+  font-weight: normal;
+}
+.about h3{
+  font-size: var(--titulos);
+  color: var(--color1);
+  text-align: center;
+}
+.about h4{
+  font-size: 20px;
+  text-align: center;
+  color: var(--color1);
+}
+.about h5{
+  font-size: var(--titulos-10);
+  color: var(--color1);
+  margin-bottom: var(--margenes);
+  text-align: center;
+}
+.servicios {
+  display:flex;
+  color: white;
+  justify-content:space-between;
+  margin: auto;
+  flex-wrap: wrap;
+  /* border: solid 1px; */
+  font-size: 18px;
+  width: 70%;
+  height: auto;
+  margin-top: 4%;
+
+
+}
+.cortar{
+
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+/* ---------------------------------------------------------------------------------- */
+
+.botones-work{
+  overflow: hidden;
+}
+.botones-work li{
+  display:inline-block;
+  text-align: center;
+  margin-left: var(--espacios);
+  margin-bottom: var(--espacios-contenido);
+  padding: 6px 12px;
+  border: 1px solid var(--color1);
+  list-style: none;
+  color: var(--color1);
+}
+.botones-work li:hover {
+  background-color: var(--color1);
+  color: white;
+  cursor: pointer;
+}
+.botones-work .active{
+  background-color: var(--color1);
+  color: white;
+}
+
+.galeria-work{
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /*---Por si non caben las imagenes se juenten*/
+  /* border:solid 1px; */
+
+}
+.galeria-work .cont-work{
+  width: 31%;
+  height: 300px;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+  overflow: hidden;
+  margin-bottom:var(--espacios-contenido);
+}
+.img-work{
+  height: 90%;
+  width: 100%;
+}
+.img-work img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.textos-work{
+  height: 10%;
+}
+.textos-work h4{
+  line-height: 30px;
+  font-weight: 300;
+}
+/* ----Footer-------Footer-------Footer-------Footer--- */
+footer{
+  background:rgb(16, 29, 34) ;
+  /* color:var(--color1);
+   */
+   color:var(--color1);
+  text-align: center;
+  flex-wrap: wrap;/**/
+  justify-content: space-between;/**/
+  
+}
+.marca-logo{
+  width: 40%;
+  margin: auto;
+  margin-bottom: var(--espacios);
+}
+.marca-logo img{
+  width: 200px;
+}
+.iconos{
+  display: flex;
+  margin: auto;
+  justify-content:space-around;
+  width: 20%;
+}
+.fab{
+  font-size: 30px;
+  color: white;
+  margin-bottom: var(--espacios);
+  display: inline-block;
+}
+.marca-aliados li{
+  display: inline;
+}
+.marca-aliados img{
+  width: 72px;
+  height:50px ;
+}
+.marca-aliados #imagen{
+  width: 169px;
+}
+.marca-aliados li:hover {
+  cursor: pointer;
+}
+/* Parte Responsive-----Parte Responsive-----Parte Responsive-----Parte Responsive  */
+@media screen and (max-width:700px){
+  .nav2{
+    color: #fff; 
+  }
+  .icono{
+      display:inline-block;
+      cursor: pointer;
+  }
+  .enlaces{
+    position: fixed;/*para que no se aline a flex-box*/
+    top: 80px;
+    background: #2c3e50;
+    left:0px;
+    height: 100%;
+    transition: 1s;
+    width: 70%;
+
+    width: 0;/**Esconde el menusito*/
+    overflow: hidden;/******/
+  }
+  .enlaces a{
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #34495e;
+    color:#fff;
+  }
+  .textos>h1{font-size: 40px;}
+  .textos>h2{font-size: 35px;}
+  .card .content-card{
+    width: 70%;
+    margin-bottom: var(--margenes);
+    /* margin: auto; */
+  }
+  .galeria-work .cont-work{
+    width: 70%;
+    margin-bottom: var(--margenes);
+  }
+  /* .logo .logo img{
+    width:80%;
+  } */
+  :root{
+    --margenes:30px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  :root{
+    --espacios-contenido: 25px;
+  }
+  .content-card{
+    width: 90%;
+  }
+  .sobre{
+    justify-content:center;
+    width: 40%;
+    margin-bottom: var(--margenes);
+  }
+  .cont-work{
+    width: 85%;
+  }
+  .marca-logo{
+    width: 80%;
+  }
+  .iconos{
+    margin: auto;
+  }
+  
+}
+/* Fin Parte responsive */
