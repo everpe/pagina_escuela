@@ -19,10 +19,18 @@
 
 body{
     font-family: 'open-sans';
-    background: var(--fondo);
+    /* background: var(--fondo); */
+    background: linear-gradient(to bottom,
+    /* rgba(211,135,20,.6), */
+    rgba(182, 211, 201, 0.6),
+    rgba(121, 188, 214, 0.45)
+  );
 }
 img{
   vertical-align: top;
+}
+ol,ul{
+  list-style:none;
 }
 /*----------------Preloader-----------Preloader----------Preloader----------Preloader-------------------------*/
 .hidden{                                                                                                      
@@ -79,7 +87,7 @@ img{
 
   header{
     width: 100%;
-    height: 450px;
+    height: 598px;
     background: linear-gradient(to bottom,
       rgba(211,135,20,.6),
       rgba(29,241,171,.6),
@@ -110,7 +118,8 @@ img{
   }
   
    .nav2{
-    background: var(--fondo);
+    /* background: var(--fondo); */
+    background: rgb(207, 224, 235);
     height: 95px;
     /* color: rgb(36, 35, 35); */
     color: var(--color1);
@@ -191,6 +200,7 @@ border: solid 1px;
     max-width: 1000px;
     text-align: center;
     overflow: hidden;
+    /* position: relative; */
     /* border: solid 1px; */
   }
   .contenedor h3{
@@ -218,13 +228,15 @@ border: solid 1px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap; /*---Por si non caben las imagenes se juenten*/
+  
   /* border:solid 1px; */
 }
 .card .content-card{
-  width: 31%;
+  width: 41%;
   box-shadow: 0 0 6px 0 rgba(0,0,0,0.5); /*Crea la sombra de las cards*/
   overflow: hidden;
   height: 400px; 
+  margin-bottom: 1%;
 }
 .people{
   height: 86%;
@@ -440,6 +452,22 @@ footer{
   :root{
     --margenes:30px;
   }
+  #botones,#botones2{
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+
+    /* left: 17.5%;
+    top: 600px; */
+  }
+  /* #botones, .atras-botones{
+    left: 17.5%;
+    top: 650px;
+  }
+  .adelante-botones{
+
+  } */
 }
 
 @media screen and (max-width: 500px){
@@ -466,3 +494,119 @@ footer{
   
 }
 /* Fin Parte responsive */
+.content{
+  width: 100%;
+  height: 450px;
+  color: black;
+  font-size: 30px;
+  background-color: rgb(218, 203, 176);
+  border-radius: 1.8%;
+  border: solid .1px rgb(219,144,0.5);
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* display: flex; */
+}
+#botones,#botones2{
+  /* font-size: 30px; */
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  background-color: rgba(224, 217, 217, 0.7);
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  /* color:rgb(227, 230, 233); */
+  color: rgb(219, 119, 18);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease ;
+  transition: all .3s ease;
+  border: solid .1px;
+  /* position: absolute; */
+}
+#botones:hover{
+  
+  cursor:pointer;
+  transform: escale(1.2,1.2);
+  background-color: rgb(179, 171, 165);
+  color: rgb(180, 96, 39);
+}
+#botones2:hover{
+  
+  cursor:pointer;
+  transform: escale(1.2,1.2);
+  background-color: rgb(179, 171, 165);
+  color: rgb(180, 96, 39);
+}
+ .atras-botones{
+  left: 17.5%;
+  /* top: 120%; */
+  top:899px;
+  /* top: calc(50%-70px); */
+  /* top: 250; */
+}
+.adelante-botones{
+  right: 17.5%;
+  top: 899px;
+  /* top: calc(50%-70px); */
+}
+.content img{
+  width:100%;
+  height:  100%;
+  border-radius: 1.8%;
+}
+.content h3{
+  margin-bottom: 0px;
+}
+.contenedor h2{
+  font-size: 45px;
+  color: rgb(168, 107, 26);
+}
+/* Carrusel Slider
+.slideshow{
+
+  width: 100%;
+  border:5px;
+  color: rgb(28, 70,94);
+  position: relative;
+}
+.slideshow img{
+  width: 100%;
+}
+.slider li img{
+  width: 100%;
+}
+.slider ul li{
+  width: 100%;
+}
+.slider,.caption{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.caption{
+  margin-top: 1px;
+  border: solid 1px;
+}
+.pagination{
+  position: absolute;
+}
+.left1, .right1{
+  position: absolute;
+  /* top: 2; 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  margin-top: -2px;
+  
+} */
