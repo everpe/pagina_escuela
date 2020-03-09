@@ -114,7 +114,6 @@ ol,ul{
     /* color:rgba(99, 96, 91, 0.171); */
     color: #fff;
     /* border: solid 3px red ; */
-    
   }
   
    .nav2{
@@ -123,8 +122,10 @@ ol,ul{
     height: 95px;
     /* color: rgb(36, 35, 35); */
     color: var(--color1);
-    /* border: solid 3px blue ; */
   }
+  /* .nav2 .logo img{
+    height: 100%;
+  } */
 
 
   .contenedor-nav{
@@ -154,7 +155,7 @@ ol,ul{
    color: white;
    overflow: hidden;
    text-align: center;
-border: solid 1px;
+  border: solid 1px;
 
  }
   nav .enlaces a{
@@ -176,8 +177,9 @@ border: solid 1px;
   {
     height: 80px;
     opacity:3;
+    /* border: solid 2px; */
   }
-  .icono{
+  .icono{/*Spam*/
     display: none;
     font-size: 24px;
     padding: 23.5px 20px;
@@ -405,6 +407,77 @@ footer{
 .marca-aliados li:hover {
   cursor: pointer;
 }
+
+
+
+.content{
+  width: 100%;
+  height: 480px;
+  color: black;
+  font-size: 30px;
+  background-color: rgb(218, 203, 176);
+  border-radius: 1.8%;
+  border: solid .1px rgb(219,144,0.5);
+
+}
+#botones,#botones2{
+  /* font-size: 30px; */
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  background-color: rgba(224, 217, 217, 0.7);
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  /* color:rgb(227, 230, 233); */
+  color: rgb(219, 119, 18);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease ;
+  transition: all .3s ease;
+  border: solid .1px;
+  /* position: absolute; */
+}
+#botones:hover{
+  
+  cursor:pointer;
+  transform: escale(1.2,1.2);
+  background-color: rgb(179, 171, 165);
+  color: rgb(180, 96, 39);
+}
+#botones2:hover{
+  
+  cursor:pointer;
+  transform: escale(1.2,1.2);
+  background-color: rgb(179, 171, 165);
+  color: rgb(180, 96, 39);
+}
+ .atras-botones{
+  left: 17.5%;
+  top:930px;
+}
+.adelante-botones{
+  right: 17.5%;
+  top: 930px;
+}
+.content img{
+  width:100%;
+  height:  100%;
+  border-radius: 1.8%;
+}
+.content h3{
+  margin-bottom: 0px;
+}
+.contenedor h2{
+  font-size: 45px;
+  color: rgb(168, 107, 26);
+}
+
+
+
+
+
 /* Parte Responsive-----Parte Responsive-----Parte Responsive-----Parte Responsive  */
 @media screen and (max-width:700px){
   .nav2{
@@ -413,6 +486,12 @@ footer{
   .icono{
       display:inline-block;
       cursor: pointer;
+  }
+  .logo{
+    margin-left: 515px;
+  }
+  .logo img{
+    height: 100%;
   }
   .enlaces{
     position: fixed;/*para que no se aline a flex-box*/
@@ -452,22 +531,33 @@ footer{
   :root{
     --margenes:30px;
   }
+
+  .contenedor h2{
+    font-size: 35px;
+  }
+  .content{
+    width: 100%;
+    height: 300px;
+    /* border: solid 5px; */
+  }
   #botones,#botones2{
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    font-size: 28px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
 
     /* left: 17.5%;
     top: 600px; */
   }
-  /* #botones, .atras-botones{
+  .atras-botones{
     left: 17.5%;
-    top: 650px;
+    /* top: 120%; */
+    top:819px;
   }
   .adelante-botones{
-
-  } */
+    right: 17.5%;
+    top: 819px;
+  }
 }
 
 @media screen and (max-width: 500px){
@@ -491,122 +581,16 @@ footer{
   .iconos{
     margin: auto;
   }
+
+  .content{
+    width: 100%;
+    height: 220px;
+    /* border: solid 5px; */
+  }
+  /* .content img{
+    width: 100%;
+    height: 200px;
+  } */
   
 }
 /* Fin Parte responsive */
-.content{
-  width: 100%;
-  height: 450px;
-  color: black;
-  font-size: 30px;
-  background-color: rgb(218, 203, 176);
-  border-radius: 1.8%;
-  border: solid .1px rgb(219,144,0.5);
-  /* position: relative; */
-  /* overflow: hidden; */
-  /* display: flex; */
-}
-#botones,#botones2{
-  /* font-size: 30px; */
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  border-radius: 50%;
-  background-color: rgba(224, 217, 217, 0.7);
-  text-align: center;
-  font-weight: bold;
-  position: absolute;
-  /* color:rgb(227, 230, 233); */
-  color: rgb(219, 119, 18);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0);
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease ;
-  transition: all .3s ease;
-  border: solid .1px;
-  /* position: absolute; */
-}
-#botones:hover{
-  
-  cursor:pointer;
-  transform: escale(1.2,1.2);
-  background-color: rgb(179, 171, 165);
-  color: rgb(180, 96, 39);
-}
-#botones2:hover{
-  
-  cursor:pointer;
-  transform: escale(1.2,1.2);
-  background-color: rgb(179, 171, 165);
-  color: rgb(180, 96, 39);
-}
- .atras-botones{
-  left: 17.5%;
-  /* top: 120%; */
-  top:899px;
-  /* top: calc(50%-70px); */
-  /* top: 250; */
-}
-.adelante-botones{
-  right: 17.5%;
-  top: 899px;
-  /* top: calc(50%-70px); */
-}
-.content img{
-  width:100%;
-  height:  100%;
-  border-radius: 1.8%;
-}
-.content h3{
-  margin-bottom: 0px;
-}
-.contenedor h2{
-  font-size: 45px;
-  color: rgb(168, 107, 26);
-}
-/* Carrusel Slider
-.slideshow{
-
-  width: 100%;
-  border:5px;
-  color: rgb(28, 70,94);
-  position: relative;
-}
-.slideshow img{
-  width: 100%;
-}
-.slider li img{
-  width: 100%;
-}
-.slider ul li{
-  width: 100%;
-}
-.slider,.caption{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-.caption{
-  margin-top: 1px;
-  border: solid 1px;
-}
-.pagination{
-  position: absolute;
-}
-.left1, .right1{
-  position: absolute;
-  /* top: 2; 
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 40px;
-  margin-top: -2px;
-  
-} */

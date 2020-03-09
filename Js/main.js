@@ -45,20 +45,27 @@ function apertura(){
     if(cerrado){
         menu.style.width='70vw';
         cerrado=false;
+        $(flecha).hide();
+        $(flecha2).hide();
+        
     }else{
         menu.style.width='';
         menu.style.overflow='hidden';
         cerrado=true;
+        
+        $(flecha).show();
+        $(flecha2).show();
     }
 }
 
 /**
- * Función que quita las flechas del slider desde que llegan a la altura del nav2
- * Flecha y flecha2 son las del Slider.
+ * Función que quita las flechas del slider desde que llegan a la altura del nav2,y el menú  
+ * móvil está cerrado.
+ * @ Flecha y flecha2 son las del Slider.
  */
 function slider(){
     let desplazamiento_Actual=window.pageYOffset;
-    if(desplazamiento_Actual<=808){
+    if(desplazamiento_Actual<=808&&cerrado){
         $(flecha).show();
         $(flecha2).show();
     }else{
@@ -74,14 +81,10 @@ conte.addEventListener('load',function(){
 function carrousel (e){
     let img=conte.querySelector('img');
     let h33=conte.querySelector('h3');//titulo de la imagen que cambia del Slider 
-    //let pp=conte.querySelector('p');//Descripción de la imagen que cambia en el Slider
 
-    
-    // alert(img.namespaceURI);
     if(e.target == flecha){
         img.src=galeria[cont];
         h33.textContent=nombres[cont];
-      //  pp.textContent='buuuuuuu';
         cont--;
         if(cont<0){
             cont=galeria.length-1;
@@ -102,7 +105,7 @@ function carrousel (e){
         }
     }
 
-        // let atras=content.querySelector('.atras-botones'),
+        /* let atras=content.querySelector('.atras-botones'),
         //     adelante=content.querySelector('.adelante-botones'),
         //     img=content.querySelector('img'),
         //     tgt=e.target;//identifica el elemento seleccionado si atras o adelante
@@ -125,7 +128,7 @@ function carrousel (e){
         //             img.src=imagenes[0];
         //             cont= 0;
         //         }
-        //     }
+        //     }*/
   
 }
 
