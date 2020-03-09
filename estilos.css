@@ -487,9 +487,9 @@ footer{
       display:inline-block;
       cursor: pointer;
   }
-  .logo{
+  /* .logo{
     margin-left: 515px;
-  }
+  } */
   .logo img{
     height: 100%;
   }
