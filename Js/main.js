@@ -1,7 +1,7 @@
-// ------------Variables----------
+// ------------Variables----------Variables----------------------------------------
 let nav= document.getElementById('nav');
 let menu= document.getElementById('enlaces');
-let abrir=document.getElementById('open');
+let abrir=document.getElementById('open');//Spam para abrir
 let botones=document.getElementsByClassName('btn-header');
 let cerrado=true;
 
@@ -12,28 +12,35 @@ var nombres=['Salon de Costura','Salon de Eventos','Restaurante Sabores de Anta�
 var textos=[''];
 let cont=0;//contador usado para recorrer los arreglos de texto e imagen del Slider.
 let conte=document.getElementById('content');//Contenedor del Slider
+let logo=document.getElementById('logoE');//img logo -escuela taller
 
 
 
 /*Funcion que muestra la transicion de los nav1 y nav2 de css*/
 function menus(){
     let desplazamiento_Actual=window.pageYOffset;
-    if(desplazamiento_Actual<=350){
+    if(desplazamiento_Actual<=350){//muestra Nav1
         nav.classList.remove('nav2');
         nav.className= ('nav1');
         nav.style.transition='1s';
 
         menu.style.top='75px';//le da altura al menu para que se adapte al alto del nav*/
         abrir.style.color='#fff';//color blanco si esta arriba
-        // alert();
+
+        logo.style.height='75px';    
+        // $(logo).hide();
+        // $(abrir).show();
         
     }else{
         nav.classList.remove('nav1');
         nav.className= ('nav2');
         nav.style.transition='1s';
-
-        menu.style.top='95px';
+        logo.style.height='95px';
+        menu.style.top='85px';
         abrir.style.color='#000';
+        
+        // $(logo).show();
+        // $(abrir).show();
         // alert();
     }
 }
@@ -43,7 +50,7 @@ function menus(){
 */ 
 function apertura(){
     if(cerrado){
-        menu.style.width='70vw';
+        menu.style.width='60vw';
         cerrado=false;
         $(flecha).hide();
         $(flecha2).hide();
@@ -52,7 +59,6 @@ function apertura(){
         menu.style.width='';
         menu.style.overflow='hidden';
         cerrado=true;
-        
         $(flecha).show();
         $(flecha2).show();
     }
@@ -64,8 +70,8 @@ function apertura(){
  * @ Flecha y flecha2 son las del Slider.
  */
 function slider(){
-    let desplazamiento_Actual=window.pageYOffset;
-    if(desplazamiento_Actual<=808&&cerrado){
+    let desplazamiento_Act=window.pageYOffset;
+    if(desplazamiento_Act<=720&&cerrado){
         $(flecha).show();
         $(flecha2).show();
     }else{
@@ -78,6 +84,10 @@ function slider(){
 conte.addEventListener('load',function(){
     carrousel();
 });
+/**
+ * Función del Slider cambia las imagenes.
+ * @param {*} e ,el evento 
+ */
 function carrousel (e){
     let img=conte.querySelector('img');
     let h33=conte.querySelector('h3');//titulo de la imagen que cambia del Slider 
@@ -104,31 +114,6 @@ function carrousel (e){
             cont=0;
         }
     }
-
-        /* let atras=content.querySelector('.atras-botones'),
-        //     adelante=content.querySelector('.adelante-botones'),
-        //     img=content.querySelector('img'),
-        //     tgt=e.target;//identifica el elemento seleccionado si atras o adelante
-
-        //     if(tgt=atras){
-        //         if(cont>0){
-        //             img.src=imagenes[cont-1];
-        //             cont--;
-        //             content.img.src=imagenes[1];
-        //         }else{
-        //             img.src=imagenes[imagenes.length-1];
-        //             cont= imagenes.length - 1;
-        //         }
-
-        //     }else if(tgt==adelante){
-        //         if(cont<imagenes.length-1){
-        //             img.src=imagenes[cont+1];
-        //             cont++;
-        //         }else{
-        //             img.src=imagenes[0];
-        //             cont= 0;
-        //         }
-        //     }*/
   
 }
 
@@ -146,7 +131,11 @@ window.addEventListener('scroll',function(){
 window.addEventListener('load',function(){
     $('#onload').fadeOut(); //Desaparece onload
     $('body').removeClass('hidden');
+    // $(logo).hide();//oculta el logo al cargar
     menus();
+
+
+
     // let contenedor= document.querySelectorAll('.content');
     // carrousel(contenedor);
     // $('.slider li').hide();//Oculta las img del Carrusel Slide
@@ -165,7 +154,7 @@ window.addEventListener('resize',function(){
 });
 
 /*
-Evento que hace el llamado para abrir el menú responsive
+Evento que hace el llamado para abrir el menú responsive al dar click en el Spam
 */
 abrir.addEventListener('click',function(){
     apertura();

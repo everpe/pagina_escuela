@@ -16,15 +16,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face{
+  
+  font-family: fuente1;
+  src:url('fonts/Nature Beauty Personal Use.ttf');
+  font-family: fuente2;
+  src:url('fonts/Dellana Demo.ttf');
+  font-family: fuente2;
+  src:url('fonts/sing_14l.ttf');
+  
+  
+  
+}
 
 body{
-    font-family: 'open-sans';
+  font-family: sans-serif;
+    /* font-family:  'verdana'; */
     /* background: var(--fondo); */
-    background: linear-gradient(to bottom,
-    /* rgba(211,135,20,.6), */
-    rgba(182, 211, 201, 0.6),
-    rgba(121, 188, 214, 0.45)
+     background: linear-gradient(to bottom,
+   rgba(255,255,255,0.5)
+   /* rgba(182, 211, 201, 0.6),*/
+    rgba(255, 255, 255, 0.45)
   );
+
+  /* background: #6D6027;
+  background: -webkit-linear-gradient(left, #D3CBB8, #6D6027);
+  background: -o-linear-gradient(left, #D3CBB8, #6D6027);
+  background: linear-gradient(to right, #D3CBB8, #6D6027); */
+
 }
 img{
   vertical-align: top;
@@ -38,7 +57,7 @@ ol,ul{
 }
 .centrado{
   position: fixed;
-   width: 100vw;
+  width: 100vw;
   height: 100vh;
   background: #000;
   z-index: 100;/*Para que solo aparezca el preloader y no se vea de resto negro*/
@@ -97,7 +116,11 @@ ol,ul{
     /* background-position: center; */
     background-size: cover;/* se adapta la pantalla*/
     font-size: 10px;
+    font-family: sans-serif;
   }
+  /* header h1{
+    font-family: sans-serif;
+  }  */
   #nav{
     width: 100%;
     position: fixed;
@@ -117,11 +140,11 @@ ol,ul{
   }
   
    .nav2{
-    /* background: var(--fondo); */
-    background: rgb(207, 224, 235);
-    height: 95px;
-    /* color: rgb(36, 35, 35); */
-    color: var(--color1);
+    background-color: white;
+    /* background: rgb(226, 210, 181); */
+    height: 85px;
+    color: rgb(54, 113, 131);
+    /* color: var(--color1); */
   }
   /* .nav2 .logo img{
     height: 100%;
@@ -139,6 +162,7 @@ ol,ul{
     width: inherit;
     /* height: 90%; */
     overflow: hidden;
+    border-radius: 2px;
     /* margin-left: 280px; */
     /* border: solid 1px; */
 
@@ -156,7 +180,7 @@ ol,ul{
    overflow: hidden;
    text-align: center;
   border: solid 1px;
-
+  /* font-family: 'Arial Narrow'; */
  }
   nav .enlaces a{
     display: inline-block;
@@ -175,16 +199,18 @@ ol,ul{
 
   .logo, .logo img
   {
-    height: 80px;
+    height: 75px;
     opacity:3;
     /* border: solid 2px; */
   }
+  .nav2 img{height: 100%;}/*Para que crezca la imagen en el nav2 (web no móvil)*/
   .icono{/*Spam*/
     display: none;
     font-size: 24px;
     padding: 23.5px 20px;
     background-color:transparent;
     opacity:3;
+    /* margin-left: 80%; */
   }
   
   .textos h1{
@@ -210,7 +236,10 @@ ol,ul{
     color: var(--color1);
     margin-bottom: var(--margenes);
   }
-  
+  .contenedor #jaja{
+    color: var(--color1);
+  }
+
   .contenedor p{
     font-size: var(--subtitulos);
     color: black;
@@ -332,16 +361,14 @@ ol,ul{
   color: white;
 }
 
-.galeria-work{
-
+#formacion .galeria-work{
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; /*---Por si non caben las imagenes se juenten*/
-  /* border:solid 1px; */
-
+  flex-wrap: wrap; 
+  height: auto;
 }
-.galeria-work .cont-work{
-  width: 31%;
+/* .galeria-work .cont-work{
+  width: 81%;
   height: 300px;
   box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
   overflow: hidden;
@@ -355,7 +382,7 @@ ol,ul{
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
+} */
 .textos-work{
   height: 10%;
 }
@@ -416,7 +443,7 @@ footer{
   color: black;
   font-size: 30px;
   background-color: rgb(218, 203, 176);
-  border-radius: 1.8%;
+  border-radius: 50%;
   border: solid .1px rgb(219,144,0.5);
 
 }
@@ -521,7 +548,7 @@ footer{
     margin-bottom: var(--margenes);
     /* margin: auto; */
   }
-  .galeria-work .cont-work{
+  .galeria-work {/*.cont-work{*/
     width: 70%;
     margin-bottom: var(--margenes);
   }
@@ -534,6 +561,7 @@ footer{
 
   .contenedor h2{
     font-size: 35px;
+    /* color: white; */
   }
   .content{
     width: 100%;
@@ -572,9 +600,9 @@ footer{
     width: 40%;
     margin-bottom: var(--margenes);
   }
-  .cont-work{
+  /* .cont-work{
     width: 85%;
-  }
+  } */
   .marca-logo{
     width: 80%;
   }
@@ -594,3 +622,5 @@ footer{
   
 }
 /* Fin Parte responsive */
+
+
