@@ -12,10 +12,18 @@
   /* justify-content: center; */
   font-family: sans-serif;
   margin: 0;
-  background: #6D6027;
+  /* background: #6D6027;
   background: -webkit-linear-gradient(left, #D3CBB8, #6D6027);
   background: -o-linear-gradient(left, #D3CBB8, #6D6027);
-  background: linear-gradient(to right, #D3CBB8, #6D6027);
+  background: linear-gradient(to right, #D3CBB8, #6D6027); */
+  /* background: rgb(39, 89, 109);
+  background: -webkit-linear-gradient(left, rgb(184, 210, 211), rgb(39, 98, 109));
+  background: -o-linear-gradient(left, rgb(184, 209, 211), rgb(39, 104, 109));
+  background: linear-gradient(to right, rgb(184, 208, 211), rgb(39, 103, 109)); */
+  background: rgb(39, 89, 109);
+  background: -webkit-linear-gradient(left, rgb(183, 198, 199), rgb(78, 124, 133));
+  background: -o-linear-gradient(left, rgb(192, 213, 214), rgb(38, 114, 119));
+  background: linear-gradient(to right, rgb(193, 206, 207), rgb(24, 105, 112));
 }
 
 .galeria-work .card {
@@ -43,7 +51,8 @@
 }
 
 .card.expanded {
-  height: 500px;
+    font-family: "Homer Simpson UI";
+    height: auto;
 }
 .card.expanded img{
     height: 210px;
@@ -81,14 +90,14 @@
 .card.expanded .text-content {
   transform: translateY(-15px);
 }
-.chevron {
+/* .chevron {
   position: absolute;
   bottom: 20px;
   left: calc(50% - 15px);
   transform-origin: 50%;
   transform: rotate(180deg);
   transition: transform 1000ms;
-}
+} */
 .card.expanded .chevron {
   transform: rotate(0deg);
 }
@@ -107,17 +116,30 @@
         justify-content: center;
         display: block;
         display: flex;
-        border-radius: 2;
+        border-radius: 2px;
+        /* border: solid 2px; */
+        background: rgb(255,255,255);
+
     }
     
     .galeria-work .card {
-        width: 90%;
-        border: solid 2px;
+        color: rgb(1, 15, 34);
+        width: 82%;
+        background: rgb(250, 250, 250);
+        background: -webkit-linear-gradient(left, rgb(184, 210, 211), rgb(39, 98, 109));
+        background: -o-linear-gradient(left, rgb(184, 209, 211), rgb(39, 104, 109));
+        background: linear-gradient(to right, rgb(184, 208, 211), rgb(39, 103, 109));
+        /* border: solid 2px; */
+    }
+    .galeria-work .card h3{
+        font-family: "Homer Simpson UI";
+        color: rgb(255, 255, 255);
+        font-weight: 900;
+        font-size: 26px;
+    }
+    .galeria-work .card img{
+        width: 100%;
+        height: 42%;
     }
   }
-  @media (max-width: 767px) {
-    /* .card {
-      left: calc(50% - 20px);
-      transform: translateX(-50%);
-    } */
-  }
+ 

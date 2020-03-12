@@ -25,7 +25,7 @@ function menus(){
         nav.style.transition='1s';
 
         menu.style.top='75px';//le da altura al menu para que se adapte al alto del nav*/
-        abrir.style.color='#fff';//color blanco si esta arriba
+        abrir.style.color='#fff';//color blanco si esta arriba spam
 
         logo.style.height='75px';    
         // $(logo).hide();
@@ -37,7 +37,7 @@ function menus(){
         nav.style.transition='1s';
         logo.style.height='95px';
         menu.style.top='85px';
-        abrir.style.color='#000';
+        abrir.style.color='rgb(54, 113, 151)';
         
         // $(logo).show();
         // $(abrir).show();
@@ -71,7 +71,7 @@ function apertura(){
  */
 function slider(){
     let desplazamiento_Act=window.pageYOffset;
-    if(desplazamiento_Act<=720&&cerrado){
+    if(desplazamiento_Act<=1082&&cerrado){
         $(flecha).show();
         $(flecha2).show();
     }else{
