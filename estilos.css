@@ -419,15 +419,18 @@ footer{
   display: flex;
 }
 .colum1{
-  width: 30%;
-  /* border: solid 1px var(--color1) ; */
-}
-.colum2{
   width: 40%;
   /* border: solid 1px var(--color1) ; */
 }
+.colum2{
+  width: 20%;
+  /* border: solid 1px var(--color1) ; */
+}
+.colum2 img{
+  color: rgb(46, 107, 163);
+}
 .colum3{
-  width: 30%;
+  width: 40%;
   /* border: solid 1px var(--color1) ; */
 }
 .container-allf h1{
@@ -436,7 +439,18 @@ footer{
 .copyright{
   color: rgba(115, 216, 230);
 }
-
+.marca-aliados li{
+  display: inline;
+}
+.marca-aliados img{
+  /* width: 72px; */
+  height:45px ;
+}
+.marca-aliados #mincultura {width: 178px;}
+.marca-aliados #escuelas {width: 181px;}
+.marca-aliados #sena {width: 47px;}
+.marca-aliados #paisaje {width: 45px;}
+.marca-aliados #gobernacion {width: 115px;}
 /* .footer{
   border: solid 3px;
   justify-content: left; 
